@@ -19,6 +19,28 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // Dynamic Navbar Highlighting on Scroll
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    window.addEventListener("scroll", function () {
+        let currentSection = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 60;
+            if (pageYOffset >= sectionTop) {
+                currentSection = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === currentSection) {
+                link.classList.add("active");
+            }
+        });
+    });
+
     // Contact Form Validation and Submission Alert
     document.getElementById("contactForm").addEventListener("submit", function (event) {
         event.preventDefault();
@@ -32,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Simple email validation
         if (!validateEmail(email)) {
             alert("Please enter a valid email address.");
             return;
@@ -46,4 +67,15 @@ document.addEventListener("DOMContentLoaded", function () {
     function validateEmail(email) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
+
+    // Dark Mode Toggle
+    const darkModeToggle = document.createElement("button");
+    darkModeToggle.innerText = "Toggle Dark Mode";
+    darkModeToggle.classList.add("dark-mode-toggle");
+    document.body.appendChild(darkModeToggle);
+
+    darkModeToggle.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+    });
+
 });
