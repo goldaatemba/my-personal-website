@@ -1,6 +1,8 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
+    background: #90ee90; /* Light Green */
+    color: white;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,6 +21,18 @@ header {
     left: 0;
     z-index: 1000;
     transition: background 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
 }
 
 nav ul {
@@ -46,12 +60,6 @@ nav ul li a.active {
     border-bottom: 2px solid #ffcc00;
 }
 
-/* Sticky Header */
-header.sticky {
-    background: rgba(51, 51, 51, 0.9);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
 /* Hero Section */
 #hero {
     background: url('hero-bg.jpg') no-repeat center center/cover;
@@ -59,7 +67,6 @@ header.sticky {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
     padding: 20px;
 }
@@ -80,7 +87,7 @@ header.sticky {
     background: #0056b3;
 }
 
-/* About Section */
+/* About, Portfolio, Contact Sections */
 #about, #portfolio, #contact {
     padding: 50px;
     text-align: center;
@@ -88,7 +95,7 @@ header.sticky {
 
 /* Portfolio Section */
 #portfolio {
-    background: #f4f4f4;
+    background: #77dd77; /* Lighter green */
 }
 
 .portfolio-container {
@@ -102,6 +109,7 @@ header.sticky {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: black;
 }
 
 .project img {
@@ -111,7 +119,7 @@ header.sticky {
 
 /* Contact Section */
 #contact {
-    background: #fff;
+    background: #66cdaa;
 }
 
 form {
@@ -126,6 +134,7 @@ form input, form textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    color: black;
 }
 
 form button {
@@ -164,6 +173,7 @@ footer {
     color: #ffcc00;
 }
 
+/* Dark Mode Toggle */
 .dark-mode-toggle {
     position: fixed;
     bottom: 20px;
