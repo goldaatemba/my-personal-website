@@ -1,5 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-    
+    // Add Profile Picture
+    const profileContainer = document.createElement("div");
+    profileContainer.classList.add("profile-container");
+
+    const profileImg = document.createElement("img");
+    profileImg.src = "your-profile-picture.jpg"; // Replace with actual image path
+    profileImg.alt = "Profile Picture";
+    profileImg.classList.add("profile-picture");
+
+    profileContainer.appendChild(profileImg);
+
+    // Insert profile picture inside the header or any desired section
+    const header = document.querySelector("header");
+    if (header) {
+        header.appendChild(profileContainer);
+    }
+
     // Smooth Scrolling for Navigation Links
     document.querySelectorAll('nav ul li a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
