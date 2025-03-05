@@ -3,9 +3,11 @@
     display: grid;
     grid-template-areas:
         "navbar navbar navbar navbar navbar navbar navbar navbar"
-        "menua menua menub menub menub menub menuc menuc"
+        "menua menua menua menua menub menub menub menub"
+        "menuc menuc menuc menuc menuc menuc menuc menuc"
         "formdiv formdiv formdiv formdiv formdiv formdiv formdiv formdiv"
-        "video1 video1 video1 video1 video2 video2 video2 video2"
+        "video1 video1 video1 video1 video2 video1 video1 video1"
+        "video2 video2 video2 video2 video2 video2 video2 video2"
         "divfoot divfoot divfoot divfoot divfoot divfoot divfoot divfoot";
 }
 
