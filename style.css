@@ -1,87 +1,104 @@
-/* grid container*/
-
-    display:grid; {
-    grid-template-area:
-    "navbar,navbar,navbar,navbar,navbar,navbar,navbar,navabar"
-    "menua,menua,menub,menub,menub,menub,menuc,menuc"
-    "formdiv,formdiv,formdiv,formdiv,formdiv,formdiv,formdiv,formdiv"
-    "video1,viseo1,video1,video1,video2,video2,video2,video2"
-    "divfoot,divfoot,divfoot,divfoot,divfoot,divfoot,divfoot,divfoot"
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "navbar navbar navbar navbar navbar navbar navbar navbar"
+        "menua menua menub menub menub menub menuc menuc"
+        "formdiv formdiv formdiv formdiv formdiv formdiv formdiv formdiv"
+        "video1 video1 video1 video1 video2 video2 video2 video2"
+        "divfoot divfoot divfoot divfoot divfoot divfoot divfoot divfoot";
 }
 
-    #navbar 
-{
+/* Navbar */
+#navbar {
     background-color: #77dd77;
-grid-area:navbar;
-margin: 10px;
+    grid-area: navbar;
+    margin: 10px;
 }
 
-# menu{
+/* Menu Sections */
+#menu {
     background-color: #f49898;
     grid-area: menua;
     margin: 5px;
 }
-#menub{
+
+#menub {
     background-color: aqua;
     grid-area: menub;
     margin: 5px;
 }
-#menuc{
+
+#menuc {
     background-color: azure;
     grid-area: menuc;
     margin: 5px;
 }
-#formdiv{
+
+/* Form Section */
+#formdiv {
     background-color: aliceblue;
     grid-area: formdiv;
     margin: 5px;
 }
-#video1{
+
+/* Video Sections */
+#video1 {
     background-color: rgb(181, 171, 189);
     grid-area: video1;
     margin: 5px;
 }
-#video2{
+
+#video2 {
     background-color: #66cdaa;
     grid-area: video2;
     margin: 5px;
 }
-#divfoot{
+
+/* Footer */
+#divfoot {
     background-color: cornsilk;
     grid-area: divfoot;
     margin: 5px;
 }
-/*navigation styling*/
-nav{
+
+/* Navigation Styling */
+nav {
     grid-area: nav;
     background: #77dd77;
     padding: 10px;
     text-align: center;
-    transition: bacground 0.3s ease;
+    transition: background 0.3s ease;
 }
-nav-hover{
+
+.nav-hover {
     background: #66cdaa;
 }
-nav ul{
+
+/* Navigation List */
+nav ul {
     list-style: none;
+    padding: 0;
 }
-nav ul li{
+
+nav ul li {
     display: inline;
     margin: 15px;
 }
+
 nav ul li a {
     color: white;
     font-weight: bold;
     text-decoration: none;
 }
-nav ul li a :hover{
+
+nav ul li a:hover {
     color: rgb(234, 234, 173);
 }
-/*media queries*/
-@media screen  and (max-width:780px){
-/*styling rule*/
-body{
-    background-color: #66cdaa;
-}
-    
+
+/* Media Queries */
+@media screen and (max-width: 780px) {
+    body {
+        background-color: #66cdaa;
+    }
 }
