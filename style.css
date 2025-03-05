@@ -9,14 +9,6 @@
         "divfoot divfoot divfoot divfoot divfoot divfoot divfoot divfoot";
 }
 
-/* Centering the grid container */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
 
 /* Navbar */
 #navbar {
